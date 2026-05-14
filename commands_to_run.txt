@@ -1,0 +1,15 @@
+Create  a superuser to change the username and password.
+Then run the app.
+
+Then go to commands prompt. 
+
+First of all run this commands to ge tthe referesh and access token
+
+curl -X POST http://localhost:8000/api/token/ -H "Content-Type: application/json" -d "{\"username\": \"username\", \"password\": \"password\"}"
+
+You will get 2 keys referesh and access
+
+Then run this coomand 
+
+curl -X POST http://localhost:8000/api/wallet/send/ -H "Content-Type: application/json" -H "Authorization: 
+Bearer Write you access key here" -d "{\"receiver_id\":7,\"amount\":50}"
